@@ -1,16 +1,17 @@
 package com.gem.mpi.screen.main.model;
 
-public class Music {
+import io.realm.RealmObject;
 
-  private String urlSong;
+public class Song extends RealmObject {
   private String nameSong;
+  private String urlSong;
 
-  public Music() {
+  public Song() {
   }
 
-  public Music(String urlSong, String nameSong) {
-    this.urlSong = urlSong;
+  public Song(String nameSong, String urlSong) {
     this.nameSong = nameSong;
+    this.urlSong = urlSong;
   }
 
   public String getUrlSong() {

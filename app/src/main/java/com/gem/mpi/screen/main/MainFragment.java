@@ -9,7 +9,6 @@ import com.gemvietnam.base.viper.ViewFragment;
  * The Main Fragment
  */
 public class MainFragment extends ViewFragment<MainContract.Presenter> implements MainContract.View {
-
   public static MainFragment getInstance(Bundle data) {
     MainFragment mainFragment = new MainFragment();
     mainFragment.setArguments(data);
@@ -24,5 +23,15 @@ public class MainFragment extends ViewFragment<MainContract.Presenter> implement
   @Override
   public void onDisplay() {
     super.onDisplay();
+  }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+  }
+
+  @Override
+  public void finalDownload(String msg) {
+    showToast(msg);
   }
 }
